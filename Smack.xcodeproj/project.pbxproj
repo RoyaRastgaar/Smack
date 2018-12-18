@@ -13,6 +13,7 @@
 		FF0ADF7221C7DEFE003858BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF0ADF7021C7DEFE003858BF /* Main.storyboard */; };
 		FF0ADF7421C7DF01003858BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF0ADF7321C7DF01003858BF /* Assets.xcassets */; };
 		FF0ADF7721C7DF01003858BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF0ADF7521C7DF01003858BF /* LaunchScreen.storyboard */; };
+		FF4374D821C9155100D02AED /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF4374D721C9155100D02AED /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		FF0ADF7321C7DF01003858BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF0ADF7621C7DF01003858BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF0ADF7821C7DF01003858BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF4374D521C9154F00D02AED /* Smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack-Bridging-Header.h"; sourceTree = "<group>"; };
+		FF4374D621C9155100D02AED /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../../Volumes/VMware Shared Folders/shared/Smack Assets/SWReveal/SWRevealViewController.h"; sourceTree = "<group>"; };
+		FF4374D721C9155100D02AED /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../../Volumes/VMware Shared Folders/shared/Smack Assets/SWReveal/SWRevealViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		FF0ADF6021C7DEFE003858BF = {
 			isa = PBXGroup;
 			children = (
+				FF4374D421C9148000D02AED /* SupportingFiles */,
 				FF0ADF6B21C7DEFE003858BF /* Smack */,
 				FF0ADF6A21C7DEFE003858BF /* Products */,
 				77066C29339F7BDE3AF285DA /* Pods */,
@@ -86,6 +91,16 @@
 				FF0ADF7821C7DF01003858BF /* Info.plist */,
 			);
 			path = Smack;
+			sourceTree = "<group>";
+		};
+		FF4374D421C9148000D02AED /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FF4374D621C9155100D02AED /* SWRevealViewController.h */,
+				FF4374D721C9155100D02AED /* SWRevealViewController.m */,
+				FF4374D521C9154F00D02AED /* Smack-Bridging-Header.h */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +137,7 @@
 				TargetAttributes = {
 					FF0ADF6821C7DEFE003858BF = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -208,6 +224,7 @@
 			files = (
 				FF0ADF6F21C7DEFE003858BF /* ViewController.swift in Sources */,
 				FF0ADF6D21C7DEFE003858BF /* AppDelegate.swift in Sources */,
+				FF4374D821C9155100D02AED /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +371,7 @@
 			baseConfigurationReference = 8852805D331E918DBF87D991 /* Pods-Smack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Smack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -362,6 +380,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.roya.Smack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SupportingFiles/Smack-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -372,6 +392,7 @@
 			baseConfigurationReference = B5A5D3F3E42BA189E525F547 /* Pods-Smack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Smack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -380,6 +401,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.roya.Smack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SupportingFiles/Smack-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
